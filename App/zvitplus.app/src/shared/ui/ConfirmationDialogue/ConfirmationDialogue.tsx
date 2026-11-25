@@ -1,5 +1,4 @@
 // ConfirmationDialog.tsx
-import React from 'react';
 import cl from './ConfirmationDialogue.module.css';
 
 interface ConfirmationDialogueProps {
