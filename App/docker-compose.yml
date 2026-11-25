@@ -19,7 +19,7 @@ services:
   api:
    build:
   context: .
-  dockerfile: zvitplus.app/Dockerfile
+  dockerfile: Dockerfile.api
     restart: unless-stopped
     depends_on:
       db:
