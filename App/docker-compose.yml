@@ -17,10 +17,9 @@ services:
       retries: 10
 
   api:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: zvitplus-api
+   build:
+  context: .
+  dockerfile: zvitplus.app/Dockerfile
     restart: unless-stopped
     depends_on:
       db:
