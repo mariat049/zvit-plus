@@ -4,7 +4,6 @@ import cl from './TemplateCard.module.css';
 import { formatFileSize, formatDate } from '@/shared/utils/formatters';
 import { A } from '../A/A';
 import { useCardActions } from '@/shared/hooks/useCardActions';
-import { useProfileActions } from '@/shared/hooks/useProfileActions';
 import { useNavigate } from 'react-router-dom';
 
 interface TemplateCardProps {
