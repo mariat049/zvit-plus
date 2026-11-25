@@ -1,0 +1,11 @@
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+WORKDIR /src
+COPY . .
+WORKDIR "/src/ZvitPlus.API"
+RUN dotnet publish "ZvitPlus.API.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
+WORKDIR /app
+EXPOSE 5267
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "ZvitPlus.API.dll"]
