@@ -65,9 +65,9 @@ export function Header() {
 
                     <div className={cl.Auth}>
                         {accessToken ? (
-            variant="primary"
                             <Button
                                 text="Вийти"
+                                variant="primary"
                                 onClick={() => {
                                     handleLogout();
                                     closeMenu();
